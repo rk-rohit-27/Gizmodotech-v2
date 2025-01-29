@@ -30,7 +30,7 @@ async function fetchPostUrls() {
     // Extract post slugs and modified dates, and return as objects
     const posts = response.data.data.posts.edges;
     return posts.map(post => ({
-      url: `${SITE_URL}/post/${post.node.slug}`,
+      url: `${SITE_URL}/${post.node.slug}`,
       lastModified: post.node.modified,
     }));
   } catch (error) {
@@ -48,7 +48,7 @@ async function generateSitemap() {
     '/terms',
     '/privacy',
     '/compare',
-    "/post"
+    '/post'
   ];
 
   // Fetch dynamic post URLs and their modified dates using GraphQL
