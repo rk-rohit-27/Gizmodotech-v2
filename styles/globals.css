@@ -1,0 +1,501 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font settings */
+html,
+body {
+  font-family: "Roboto", sans-serif; /* More elegant and readable serif font */
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+/* Using Tailwind’s utility classes for further customization */
+body {
+  @apply bg-white text-[#1A1A1A]; /* Light mode default background and text color */
+}
+
+body.dark {
+  @apply bg-[#1d1c28] text-white; /* Dark mode background and text color */
+}
+
+a {
+  @apply text-[#1a1a1a]; /* Light mode link color */
+}
+body.dark a {
+  @apply text-white; /* Light mode link color */
+}
+
+h1,
+h2,
+h3 {
+  @apply text-3xl font-bold; /* Font size and weight for headings */
+}
+/* Dark Mode Colors */
+body.dark h2.wp-block-heading,
+body.dark h3.wp-block-heading,
+body.dark h4.wp-block-heading,
+body.dark h5.wp-block-heading,
+body.dark h6.wp-block-heading,
+body.dark h1.wp-block-heading {
+  color: #ffff; /* Light text color for headings in dark mode */
+}
+body.dark p {
+  color: #eeeef1;
+}
+body.dark table {
+  color: #eeeef1;
+}
+header {
+  position: sticky;
+  top: 0%;
+  z-index: 99999;
+}
+
+.mh-excerpt-more {
+  display: none;
+}
+
+.tb-min th,
+.tb-min td {
+  min-width: 150px;
+  max-width: 200px;
+  padding: 12px 15px;
+  font-size: 14px; /* Set the default font size to 14px */
+  border: 1px solid #ddd;
+  word-wrap: break-word; /* Ensure content wraps properly */
+}
+
+
+@media (max-width: 768px) {
+
+  .tb-min th,
+  .tb-min td {
+    font-size: 12px; /* Override the font size for smaller screens */
+  }
+
+  .crd:last-child {
+    border-bottom: none;
+  }
+}
+.table-2 {
+  max-width: 100%;
+  overflow-x: auto;
+  font-size: 12px;
+}
+
+.tb-min {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  
+  text-align: left;
+}
+.tb-min td:first-child {
+  min-width: 80px ;
+  word-wrap: break-word;
+}
+.tb-min th {
+  letter-spacing: .5px;
+}
+
+
+body.dark .tb-min th,
+body.dark .tb-min td {
+  border: 1px solid #333146;
+}
+
+body.dark .tb-min tbody tr:nth-child(even) {
+  background-color: #1d1c2a;
+  color: #fff;
+}
+body.dark .tb-min tbody tr {
+  color: #fff;
+}
+
+table.has-fixed-layout {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  table-layout: fixed; /* Ensure consistent column widths */
+}
+
+table.has-fixed-layout th,
+table.has-fixed-layout td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  word-wrap: break-word; /* Ensure content wraps properly */
+}
+
+body.dark table.has-fixed-layout th,
+body.dark table.has-fixed-layout td {
+  border: 1px solid #333146;
+}
+
+.wp-block-separator {
+  display: none;
+}
+
+table.has-fixed-layout tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+  color: black;
+}
+body.dark table.has-fixed-layout tbody tr:nth-child(even) {
+  background-color: #1d1c2a;
+  color: #ffff;
+}
+body.dark .blog-content {
+  color: #b3b3b6;
+}
+table.has-fixed-layout th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  table.has-fixed-layout {
+    font-size: 16px; /* Adjust table font size for small screens */
+  }
+  table.has-fixed-layout th,
+  table.has-fixed-layout td {
+    padding: 8px; /* Adjust padding for small screens */
+  }
+  table.tb-min {
+    font-size: 14px; /* Adjust table font size for small screens */
+  }
+  table.tb-min th,
+  table.tb-min td {
+    padding: 8px; /* Adjust padding for small screens */
+  }
+  .blog-content p {
+    font-size: 16px;
+  }
+}
+
+.blog-content p  {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 20px 0;
+  }
+
+.blog-content a {
+  color: #0d8888;
+}
+
+body.dark .blog-content a {
+  color: #0d8888;
+}
+h2.wp-block-heading {
+  font-size: 26px; /* Adjust heading size */
+  margin-top: 20px 0px;
+  font-weight: 700;
+}
+h3.wp-block-heading {
+  font-size: 22px; /* Adjust heading size */
+  margin-top: 20px 0px;
+  font-weight: 600;
+}
+
+.wp-block-image {
+  width: 100%;
+  height: 300px; /* Adjust the multiplier as needed */
+  margin: 30px 0px;
+}
+
+.wp-block-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+h4.wp-block-heading {
+  font-size: 20px; /* Adjust heading size */
+  margin: 15px 0px;
+  font-weight: 600;
+}
+/* Responsive Adjustments for Headings */
+@media (max-width: 768px) {
+  h2.wp-block-heading
+   {
+    font-size: 22px; /* Adjust heading size for small screens */
+  }
+  h3.wp-block-heading{
+    font-size: 20px; 
+  }
+  h4.wp-block-heading {
+    font-size: 18px; /* Adjust heading size for small screens */
+  }
+  .custom-blog p {
+    font-size: 16px !important;
+    line-height: 30px !important;
+  }
+  .blog-content p {
+    font-size: 16px !important;
+    line-height: 30px !important;
+  }
+  
+  .custom-blog h2 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  .custom-blog h3 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .custom-blog h4 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+
+}
+
+body.dark .custom-blog .wp-block-heading a{
+  color: #ffff;
+}
+
+/* Container that holds the loader */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+}
+
+/* Skeleton image with shimmer effect */
+.skeleton-image {
+  width: 100%;
+  height: 250px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Skeleton text placeholder */
+.skeleton-text {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  margin-bottom: 8px;
+}
+
+/* Different width for different text blocks */
+.skeleton-text {
+  width: 75%;
+}
+
+.skeleton-text {
+  width: 50%;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  gap: 24px; /* Space between grid items */
+}
+
+/* For medium screens (max-width: 1024px), display 2 columns */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+/* For small screens (max-width: 768px), display 1 column */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+  .grid-column {
+    grid-template-columns: 1fr;
+  }
+}
+.toc-list a {
+  color: #0e0b3d !important;
+  font-weight: 400 !important;
+}
+
+body.dark .toc-list a {
+  color: #f0f0f0 !important;
+}
+.blog-content a {
+  color: #0d8888;
+  font-weight: 600;
+}
+.wp-block-heading strong {
+  font-weight: 600;
+}
+
+.bg-gard {
+  background-image: linear-gradient(
+    90deg,
+    rgb(140, 175, 232) 2%,
+    rgb(254, 167, 135) 99%
+  );
+}
+body.dark .except-white p {
+  color: black;
+}
+
+.grid-column {
+  display: grid;
+  grid-template-columns: auto 250px;
+  gap: 30px;
+  align-items: start;
+}
+@media (max-width: 800px) {
+  .grid-column {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+body.dark .text-wh a {
+  color: #b3b3b6;
+}
+/* Add this CSS to your styles file (e.g., styles.css) */
+.active-link {
+  color: #0d8888;
+  text-decoration: underline;
+  text-underline-offset: 4px; /* Adds space between text and underline */
+}
+
+body.dark .active-link {
+  color: #0d8888;
+}
+.loader-animation {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+body.dark .slider-content p {
+  color: white;
+}
+
+.blog-content .wp-block-image {
+  display: none;
+}
+
+.custom-blog .wp-block-list {
+  list-style: disc;
+  padding-left: 20px;
+  font-size: 16px;
+  
+}
+.custom-blog .wp-block-list li {
+  margin-top: 10px;
+}
+body.dark .custom-blog .wp-block-list li {
+  color: #eeeef1;
+}
+.custom-blog p {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.custom-blog h2 {
+  font-size: 26px;
+  margin-top: 20px;
+}
+.custom-blog h3 {
+  font-size: 22px;
+  margin-top: 20px;
+}
+.custom-blog h4 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.custom-blog .wp-block-image {
+  margin: 30px 0;
+}
+
+.custom-blog body.dark h2.wp-block-heading,
+body.dark h3.wp-block-heading,
+body.dark h4.wp-block-heading,
+body.dark h5.wp-block-heading,
+body.dark h6.wp-block-heading,
+body.dark h1.wp-block-heading {
+  color: white;
+}
+
+.custom-blog a{
+  color: #0D8888;
+}
+.custom-blog .wp-block-heading a{
+  
+text-decoration: underline;
+text-decoration-thickness: 1.5px;
+text-underline-offset: 4px; /* Adjust the offset value as needed */
+color: #1d1c2a;
+}
+body.dark .custom-blog .wp-block-heading {
+  color: #ffff;
+}
+
+.custom-blog .wp-block-image {
+  width: 100%;
+  height: auto;
+}
+.custom-blog .wp-block-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+
+.custom-blog .extra-img img {
+  object-fit: contain !important;
+  width: 100%;
+  height: 300px
+}
+
+.read-more-link {
+  display: none;
+}
